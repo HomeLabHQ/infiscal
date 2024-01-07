@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  infiscal:
+    container_name: infiscal
+    env_file:
+      - .env
+    ports:
+      - 1000:8080
+    image: infisical/infisical:latest
+  mongo:
+    container_name: infiscal-mongo
+    image: mongo:7.0.4
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - infiscal-mongo:/data/db
+volumes:
+  infiscal-mongo:

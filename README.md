@@ -1,2 +1,3 @@
-# infiscal
-Single place to store credentials and env variables
+# Infiscal
+
+Self hosted infiscal instance to organize mess of env files.
