@@ -1,3 +1,7 @@
-# Infiscal
+# Secrets
 
-Self hosted infiscal instance to organize mess of env files.
+Self hosted solution to store all project secrets contains:
+
+- Infisical
+- Mongo
+- Redis

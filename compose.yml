@@ -1,19 +1,28 @@
 version: "3.8"
 services:
-  infiscal:
-    container_name: infiscal
+  infisical:
+    container_name: infisical
     env_file:
       - .env
     ports:
-      - 1000:8080
+      - 66:8080
     image: infisical/infisical:latest
   mongo:
-    container_name: infiscal-mongo
+    container_name: infisical-mongo
     image: mongo:4.4.27
     restart: always
     env_file:
       - .env
     volumes:
-      - infiscal-mongo:/data/db
+      - infisical-mongo:/data/db
+  redis:
+    container_name: infisical-redis
+    image: redis:7.2.3
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - infisical-redis:/data
 volumes:
-  infiscal-mongo:
+  infisical-mongo:
+  infisical-redis:
